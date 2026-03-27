@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ponto de Controle Semanal - Log-In</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+    <div class="presentation-wrapper">
+        
+        <!-- HEADER FIXO -->
+        <header class="main-header">
+            <div class="header-logo">Log-In <span>Cabotagem</span></div>
+            <div class="header-divider"></div>
+            <div class="header-label">Ponto de Controle Semanal</div>
+            <div class="nav-controls">
+                <button id="prevBtn" onclick="changeSlide(-1)" class="circle-btn"><i data-lucide="chevron-left"></i></button>
+                <span id="slideIndicator">01 / 06</span>
+                <button id="nextBtn" onclick="changeSlide(1)" class="circle-btn"><i data-lucide="chevron-right"></i></button>
+            </div>
+        </header>
+
+        <main class="slides-container">
+            
+            <!-- CAPA -->
+            <section id="slide-1" class="slide active slide-cover">
+                <div class="cover-glow"></div>
+                <div class="cover-content">
+                    <div class="kpi-tag">Google Ads Dashboard</div>
+                    <h1>Ponto de Controle <br>semanal — <span>Log-In</span></h1>
+                    <p class="cover-subtitle">Análise estratégica de performance: 22 a 27 de março de 2026</p>
+                    <div class="cover-footer">
+                        <div class="footer-item">
+                            <span class="label">Responsável</span>
+                            <span class="value">Paulo — Tráfego Pago</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 1: O Horizonte Geral -->
+            <section id="slide-2" class="slide slide-layout-split">
+                <div class="story-content">
+                    <div class="slide-num">Slide 01</div>
+                    <h2 class="slide-title">O Horizonte Geral <br><span class="accent">(Performance Semanal)</span></h2>
+                    <p class="story-text">"Nesta última semana de março, alcançamos o 'pico de intenção'. Nossa campanha de fundo de funil (BOFU) não apenas atraiu olhares, mas gerou 53 leads com um custo por conversão de R$ 50,52, o que é extremamente saudável para o ticket médio da cabotagem."</p>
+                </div>
+                <div class="visual-content">
+                    <div class="funnel-container">
+                        <div class="funnel-step step-1">
+                            <div class="step-label">Impressões</div>
+                            <div class="step-value">6.033</div>
+                            <div class="step-shape"></div>
+                        </div>
+                        <div class="funnel-step step-2">
+                            <div class="step-label">Cliques</div>
+                            <div class="step-value">797</div>
+                            <div class="step-shape"></div>
+                        </div>
+                        <div class="funnel-step step-3">
+                            <div class="step-label">Conversões</div>
+                            <div class="step-value">53</div>
+                            <div class="step-shape"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 2: A Qualidade do Clique -->
+            <section id="slide-3" class="slide slide-layout-split">
+                <div class="story-content">
+                    <div class="slide-num">Slide 02</div>
+                    <h2 class="slide-title">A Qualidade do Clique <br><span class="accent">(CTR e Engajamento)</span></h2>
+                    <p class="story-text">"O CTR está bem acima da média, o que demonstra que estamos tendo assertividade na estratégia. Com um CTR de 13%, o Google entende que somos a resposta exata para o que o mercado busca. Isso nos deu um posicionamento privilegiado: 78% das vezes estamos no topo da página."</p>
+                </div>
+                <div class="visual-content">
+                    <div class="ctr-reveal-box">
+                        <div class="ctr-main-value">13.21%</div>
+                        <div class="ctr-sub">CTR ATUAL</div>
+                        <div class="benchmark-pill">Benchmark Setor: 3% — 5%</div>
+                        <div class="positioning-badge"><i data-lucide="arrow-up-right"></i> 78% Topo da Página</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 3: Inteligência de Busca -->
+            <section id="slide-4" class="slide slide-layout-full">
+                <div class="story-full">
+                    <div class="slide-num">Slide 03</div>
+                    <h2 class="slide-title">Inteligência de Busca — <span class="accent">Alta Performance vs. Atenção</span></h2>
+                    <p class="story-text">"Muitos especialistas dizem que um CTR excelente é na casa dos 10%. Conseguimos resultados extraordinários em algumas palavras-chave e resultados ruins em outras. Minha sugestão imediata é desativar as palavras-chave com CTR abaixo de 5%."</p>
+                    
+                    <div class="comparison-grid">
+                        <div class="comp-box stars">
+                            <h3><i data-lucide="star"></i> Lado Verde (Estrelas)</h3>
+                            <div id="starsList">
+                                <!-- JS Populates -->
+                            </div>
+                        </div>
+                        <div class="comp-box attention">
+                            <h3><i data-lucide="alert-triangle"></i> Lado Amarelo (Atenção)</h3>
+                            <div id="attentionList">
+                                <!-- JS Populates -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 4: O Caso Manaus -->
+            <section id="slide-5" class="slide slide-layout-split">
+                <div class="story-content">
+                    <div class="slide-num">Slide 04</div>
+                    <h2 class="slide-title">O "Caso Manaus" <br><span class="accent">e Ajustes Regionais</span></h2>
+                    <p class="story-text">"Conforme planejado, Manaus segue como um polo de interesse, mas com um comportamento de busca mais genérico. Mesmo o grupo de anúncios específico não tendo volume ainda, Manaus está entre os estados que mais converte."</p>
+                </div>
+                <div class="visual-content">
+                    <div class="map-visual">
+                         <h3 class="chart-inner-title">Conversões por Estado</h3>
+                         <canvas id="locationsChart"></canvas>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 5: Próximos Passos -->
+            <section id="slide-6" class="slide slide-layout-split">
+                <div class="story-content">
+                    <div class="slide-num">Slide 05</div>
+                    <h2 class="slide-title">Próximos Passos <br><span class="accent">(Rumo à Intermodal)</span></h2>
+                    <p class="story-text">"A campanha de search da intermodal não vem performando bem. Minha sugestão é utilizar formulários do META para alcançar público qualificado e visitas ao stand no x1."</p>
+                </div>
+                <div class="visual-content">
+                    <div class="next-steps-container">
+                        <div class="countdown-card">
+                            <div class="countdown-val">18</div>
+                            <div class="countdown-label">Dias para 14 de Abril</div>
+                        </div>
+                        <ul class="action-list">
+                            <li><i data-lucide="check-circle"></i> Ativação do Waze Ads</li>
+                            <li><i data-lucide="check-circle"></i> Search focado em SP Capital</li>
+                            <li><i data-lucide="check-circle"></i> Formulários META (Intermodal)</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+    <script>lucide.createIcons();</script>
+</body>
+</html>
