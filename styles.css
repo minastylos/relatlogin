@@ -360,3 +360,42 @@ body {
 .action-list li i { color: var(--emerald-pri); }
 
 .visual-content canvas { width: 100% !important; height: 350px !important; }
+
+/* KPI CARDS ROW */
+.kpi-cards-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-top: 2rem;
+    width: 100%;
+    max-width: 500px;
+}
+
+.kpi-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 1.25rem 1rem;
+    text-align: center;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.kpi-card:hover {
+    border-color: var(--emerald-pri);
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.08);
+}
+
+.kpi-card-label {
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: var(--text-sec);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+}
+
+.kpi-card-value {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: var(--emerald-pri);
+}
