@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log-In Logística | Performance Report</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <div class="nav-item active" title="Geral" onclick="scrollToSection('header')">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </div>
+            <div class="nav-item" title="Meta Ads" onclick="scrollToSection('meta-ads')">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </div>
+            <div class="nav-item" title="Google Ads" onclick="scrollToSection('google-ads')">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+            </div>
+            <div class="nav-item" title="Instagram" onclick="scrollToSection('instagram')">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header id="header" class="header">
+                <h1>Log-In Logística</h1>
+                <p>Relatório de Performance Digital • Março 2026</p>
+            </header>
+
+            <!-- Meta Ads Section -->
+            <section id="meta-ads">
+                <div class="section-title">
+                    <div class="section-icon meta-bg">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                    </div>
+                    <h2>Meta Ads (LogIn Logística Integrada)</h2>
+                </div>
+
+                <div class="metrics-grid">
+                    <div class="card">
+                        <span class="metric-label">Investimento Total</span>
+                        <span class="metric-value">R$ 208,94</span>
+                        <span class="metric-trend trend-up">▲ 12%</span>
+                    </div>
+                    <div class="card">
+                        <span class="metric-label">CTR Médio</span>
+                        <span class="metric-value">3,21%</span>
+                        <span class="metric-trend trend-up">▲ 5.4%</span>
+                    </div>
+                    <div class="card">
+                        <span class="metric-label">Impacto (Impressões)</span>
+                        <span class="metric-value">12.327</span>
+                    </div>
+                    <div class="card">
+                        <span class="metric-label">Alcance</span>
+                        <span class="metric-value">8.371</span>
+                    </div>
+                </div>
+
+                <div class="card" style="margin-bottom: 3rem;">
+                    <h3>Funil de Performance</h3>
+                    <div class="chart-container">
+                        <canvas id="metaFunnelChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Campanhas em Destaque</h3>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Nome da Campanha</th>
+                                    <th>Investido</th>
+                                    <th>Cliques</th>
+                                    <th>CTR</th>
+                                    <th>Lead</th>
+                                </tr>
+                            </thead>
+                            <tbody id="meta-table-body">
+                                <!-- Preenchido via JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Google Ads Section -->
+            <section id="google-ads">
+                <div class="section-title">
+                    <div class="section-icon google-bg">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+                    </div>
+                    <h2>Google Ads (Log-In Logística OFICIAL)</h2>
+                </div>
+
+                <div class="metrics-grid">
+                    <div class="card">
+                        <span class="metric-label">Custo Total</span>
+                        <span class="metric-value">R$ 11.877,17</span>
+                    </div>
+                    <div class="card">
+                        <span class="metric-label">Conversões</span>
+                        <span class="metric-value">274</span>
+                        <span class="metric-trend trend-up">▲ 24%</span>
+                    </div>
+                    <div class="card">
+                        <span class="metric-label">CPC Médio</span>
+                        <span class="metric-value">R$ 2,33</span>
+                    </div>
+                    <div class="card">
+                        <span class="metric-label">CTR</span>
+                        <span class="metric-value">17,45%</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Palavras-Chave de Maior Impacto</h3>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Palavra-Chave</th>
+                                    <th>Cliques</th>
+                                    <th>Custo</th>
+                                    <th>Conversões</th>
+                                    <th>Custo/Conv.</th>
+                                </tr>
+                            </thead>
+                            <tbody id="google-table-body">
+                                <!-- Preenchido via JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer>
+                <p>Relatório Gerado para Log-In Logística</p>
+                <div style="margin-top: 1.5rem;">
+                    <span style="opacity: 0.7; font-size: 0.8rem; letter-spacing: 2px;">POWERED BY</span>
+                    <h3 style="color: #10b981; margin-top: 0.5rem; letter-spacing: 4px;">TR.K</h3>
+                </div>
+            </footer>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
